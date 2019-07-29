@@ -1,0 +1,139 @@
+body {
+    background-color: silver;
+}
+
+input[type=text] {
+    order: -2;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 10%;
+    align-self: flex-start;
+}
+
+label {
+    order: -2;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 10%;
+    align-self: flex-start;
+}
+
+.adjust {
+    margin-right: -80px;
+}
+
+footer {
+    height: 60px;
+}
+
+.space {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+#add {
+    size: 5;
+}
+
+.table-responsive {
+    margin-top: 70px;
+}
+
+.data {
+    margin-top: -20px;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+#label_pid {
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 7.5rem;
+
+}
+
+#pid {
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 9.1rem;
+
+}
+
+#label_pclass {
+    order: 2;
+    flex-grow: 1;
+
+}
+
+#pclass {
+    order: 2;
+    flex-grow: 1;
+    flex-basis: 6rem;
+
+}
+
+#label_pname {
+    order: 4;
+    flex-grow: 3;
+    flex-basis: 14rem;
+}
+
+#pname {
+    order: 3;
+    flex-grow: 3;
+    flex-basis: 14.8rem;
+}
+
+#psex {
+    order: 4;
+    flex-grow: 1;
+    flex-basis: 6.3rem;
+}
+
+#age {
+    order: 5;
+    flex-grow: 1;
+    flex-basis: 5.8rem;
+}
+
+#sibsp {
+    order: 6;
+    flex-grow: 1;
+    flex-basis: 5.8rem;
+}
+
+#parch {
+    order: 7;
+    flex-grow: 1;
+    flex-basis: 5.8rem;
+}
+
+#ticket {
+    order: 8;
+    flex-grow: 1;
+}
+
+#fare {
+    order: 9;
+    flex-grow: 1;
+    flex-basis: 7.1rem;
+}
+
+#cabin {
+    order: 10;
+    flex-grow: 1;
+    flex-basis: 5.8rem;
+}
+
+#embarked {
+    order: 11;
+    flex-grow: 0.001;
+    flex-basis: 6.5rem;
+}

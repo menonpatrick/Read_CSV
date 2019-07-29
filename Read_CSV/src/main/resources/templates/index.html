@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<meta charset="ISO-8859-1"></meta>
+		<meta name="description" content="Reading a file and displaying it in a table format" ></meta>
+	    <meta name="keywords" content="HTML,JavaScript" ></meta>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" ></meta>
+	    <meta name="author" content="Prateek Menon"></meta>
+	    
+	    <!-- The JQuery file should be imported before the bootstrap file -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" />
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="/js/index.js" charset="utf-8"></script>
+	    <link rel="stylesheet" href="/css/index.css">
+	    
+		<title>Reading CSV File</title>
+	</head>
+	
+	<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand"><img width="30" height="30" src="csv.png" alt=""></a>
+            <span class="navbar-text"> Reading Titanic CSV </span>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="container">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            About
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reading CSV</h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    </div>
+
+                    <div class="modal-body">
+                        This is a basic Web Application that uploads the Titanic_Test csv file and displays the table.
+                        It also allows you to edit any row just by selecting the row and entering the required values in the textfields.
+                        Once done, hot "Edit".
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <h1 class="title" align="center"> Click Display to view the Titanic Table</h1>
+                <br />
+                <div align="center">
+                    <button type="button" name="load_data" id="load_data" class="btn btn-info" accept=".csv">
+                        Display
+                    </button>
+                    <button type="button" name="edit_data" id="edit_data" class="btn btn-success">
+                        Edit Row
+                    </button>
+                    <button type="button" name="pie_chart" id="pie_chart" class="btn btn-danger">
+                        Pie Chart
+                    </button>
+                    <button type="button" name="bar_graph" id="bar_graph" class="btn btn-danger">
+                        Bar Graph
+                    </button>
+                </div>
+                <br />
+                <div id="stats">
+                    <canvas id="pie" ></canvas>
+                    <canvas id="bar" ></canvas>
+                </div>
+                <br />
+                <div class="fields" align="center">
+                    <div class="space" align="center">
+                        <input placeholder="PassengerId" type="text" class="adjust" name="pid" id="pid" size="12" autocomplete="off">
+                        <input placeholder="Pclass" type="text" class="adjust" name="pclass" id="pclass" size="5" autocomplete="off">
+                        <input placeholder="Name" type="text" class="adjust" name="pname" id="pname" size="20" autocomplete="off">
+                        <input placeholder="Sex" type="text" class="adjust" name="sex" id="psex" size="6" autocomplete="off">
+                        <input placeholder="Age" type="text" class="adjust" name="age" id="age" size="6" autocomplete="off">
+                        <input placeholder="SibSp" type="text" class="adjust" name="sibsp" id="sibsp" size="6" autocomplete="off">
+                        <input placeholder="Parch" type="text" class="adjust" name="parch" id="parch" size="8" autocomplete="off">
+                        <input placeholder="Ticket" type="text" class="adjust" name="ticket" id="ticket" size="6" autocomplete="off">
+                        <input placeholder="Fare" type="text" class="adjust" name="fare" id="fare" size="6" autocomplete="off">
+                        <input placeholder="Cabin" type="text" class="adjust" name="cabin" id="cabin" size="6" autocomplete="off">
+                        <input placeholder="Embarked" type="text" name="embarked" id="embarked" size="3" autocomplete="off">
+                    </div>
+                </div>
+                <h3 align="center">You can select any row to edit it</h3>
+                <br />
+                <div id="titanic"></div>
+            </div>
+        </div>
+
+        <footer class="py-4 bg-dark text-white-50 fixed-bottom">
+            <div class="data footer-copyright text-center py-3">
+                &copy 2019 Copyright: (Prateek Menon)     
+                <a href="https://github.com/menonpatrick/Read_CSV" target="_blank">Github.com</a>
+            </div>
+        </footer>
+
+    </body>
+	
+</html>
